@@ -64,7 +64,10 @@ onMounted(() => {
     props.defaultData.listDishSelect &&
     props.defaultData.listDishSelect.length
   ) {
+    console.log(props.defaultData.listDishSelect);
     listDishSelect.value = props.defaultData.listDishSelect;
+
+    console.log();
   }
 });
 
@@ -74,7 +77,7 @@ const numServing = ref(1);
 
 const dish = ref({});
 
-const props = defineProps(["listDish", "numPeople"]);
+const props = defineProps(["listDish", "numPeople", "defaultData"]);
 
 const emit = defineEmits(["nextReview", "previousStep"]);
 
