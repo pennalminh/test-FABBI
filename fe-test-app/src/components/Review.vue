@@ -11,25 +11,19 @@ const props = defineProps(["dataReview"]);
         <span style="width: 60px">Meal</span>
         <span>{{ props.dataReview.meal }}</span>
       </div>
-      <div>
-        <span style="display: flex; justify-content: space-between"
-          >No of people</span
-        >
+      <div style="display: flex; justify-content: space-between">
+        <span>No of people</span>
         <span>{{ props.dataReview.numberPeople }}</span>
       </div>
-      <div>
-        <span style="display: flex; justify-content: space-between"
-          >Restaurant</span
-        >
+      <div style="display: flex; justify-content: space-between">
+        <span>Restaurant</span>
         <span>{{ props.dataReview.restaurant }}</span>
       </div>
-      <div>
-        <span style="display: flex; justify-content: space-between"
-          >Dishes</span
-        >
+      <div style="display: flex; justify-content: space-between">
+        <span>Dishes</span>
         <ul>
           <li v-for="item in props.dataReview.listDishSelect" :key="item">
-            {{}}
+            {{ item.name }} - {{ item.numServing }}
           </li>
         </ul>
       </div>
@@ -45,7 +39,7 @@ const props = defineProps(["dataReview"]);
       <button
         style="float: right; margin-top: 10px; background-color: cadetblue"
       >
-        Next
+        Submit
       </button>
     </div>
   </div>
